@@ -37,5 +37,7 @@ int main(int argc, char const *argv[])
         imshow("video",frame);
         break;
     }
+
+    printf("CV_VERSION\n");
     return 0;
 }
