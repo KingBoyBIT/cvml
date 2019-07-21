@@ -25,5 +25,17 @@ int main(int argc, char const *argv[])
     blur(grayImage,edge,Size(3,3));
     canny(edge,edge,3,9,3);
     
+
+    //视频操作
+    VideoCapture capture;
+    capture.open("1.avi");//视频
+    // capture.open(0);//摄像头
+    while(1)
+    {
+        Mat frame;
+        capture>>frame;
+        imshow("video",frame);
+        break;
+    }
     return 0;
 }
